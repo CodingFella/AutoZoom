@@ -22,7 +22,7 @@ public class Main {
         Scanner scanner = null;
 
         try {
-            scanner = new Scanner(new File("src/Schedule.txt"));
+            scanner = new Scanner(new File("Schedule.txt"));
         } catch (FileNotFoundException e) {
             System.out.println("File not found.");
             e.printStackTrace();
