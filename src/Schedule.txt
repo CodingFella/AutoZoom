@@ -1,0 +1,5 @@
+Name(no spaces), Day of Week (Mon Tue Wed etc.), Time (24hr), Link
+Test	Sun	09:52:00	https://fuhsd-org.zoom.us/j/blahblahblahblah
+Period1 Sun 10:03:00 https://google.com
+Period2 Sun 10:04:00 https://minecraft.net
+Period3 Sun 10:05:00 https://www.strava.com/dashboard
