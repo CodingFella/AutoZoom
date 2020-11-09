@@ -28,6 +28,8 @@ public class Main {
             e.printStackTrace();
         }
         scanner.nextLine();
+	
+	    
 
         StringTokenizer st = new StringTokenizer(scanner.nextLine());
         while(st.hasMoreTokens()){
@@ -42,6 +44,9 @@ public class Main {
                 break;
             }
         }
+	    for(int i=0; i<names.size(); i++){
+            System.out.println("Loaded: " + names.get(i) + " " + days.get(i) + " " + times.get(i) + " " + links.get(i)); // user can verify they have schedule right
+	    }
 
         String currentTime;
 
@@ -51,7 +56,7 @@ public class Main {
             for (int i = 0; i < names.size(); i++) {
                 if (days.get(i).equals(currentTime.substring(0, 3))
                         && times.get(i).equals(currentTime.substring(11, 16))) {
-                    System.out.println("Joining " + names.get(i) + "'s Zoom Meeting.");
+                    System.out.println("Joining " + names.get(i) + "'s Zoom Meeting.\nCurrent Time: "+currentTime);
                     try {
                         url = new URI(links.get(i));
                         d.browse(url);
@@ -61,6 +66,12 @@ public class Main {
                     }
                 }
             }
+	        try{
+		        Thread.sleep(1000); // limits checks to once per second instead of multiple times a second
+	        }
+	        catch(Exception e){
+		        e.printStackTrace();
+	        }
         }
 
 
